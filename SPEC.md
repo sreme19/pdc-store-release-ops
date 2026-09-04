@@ -34,14 +34,39 @@ result through a deterministic CLI.
    way `ad-management-agent` decision 3's live-account boundary was only ever loosened by the app owner
    in as many words.
 
-3. **Read and record, never act.** This repo's skills read console state and write it to the ledger.
-   They never submit an App Store resubmission, never promote a Play release track, never change a
-   tester list or a rollout percentage. Any actual release action (cutting a build, bumping a version,
-   resubmitting to review, promoting Open Testing → Production) stays a human decision, executed either
-   by hand in the console or via the scripts that already live in `pocket-dating-coach/mobile` — this
-   repo is the tracker, not the trigger. If that boundary is ever loosened, it should be loosened the
-   way `ad-management-agent`'s live-account rule was: by the app owner, explicitly, with the cost stated
-   up front — not inferred from a task going well.
+3. **Read and record; prepare but never complete.** **Amended by the app owner on 2026-09-03**, in
+   the form this decision itself asked for: explicitly, with the cost stated, and on the
+   `ad-management-agent` precedent this decision named. The original rule was *read and record, never
+   act* — the tracker, not the trigger.
+
+   **What is now allowed.** Navigating both consoles, drafting release notes, attaching a build,
+   preparing a submission, and reading the result back to diff it against what was intended. The
+   shape is Snap and Meta's: create the object, leave the activation to a person.
+
+   **What is still never allowed.** Pressing *Submit for Review*. Promoting Open Testing → Production.
+   Releasing to users. Changing a rollout percentage or a tester list. Those are human actions, every
+   time, in the same way that starting ad spend in Ads Manager is.
+
+   **Unchanged.** Never enter an Apple ID password or a 2FA code — decisions 2 and 9, and a hard wall
+   rather than a preference. Cutting builds, signing and version bumps stay in
+   `pocket-dating-coach/mobile` per decision 4; nothing about release engineering moved here.
+
+   **Be clear about what this cost.** The old rule was true *by construction*: this repo had no
+   credentials and no way to touch a console, so "never acts" needed no enforcement. It now has a hand
+   on the controls, and what replaces construction is a named list of forbidden actions — which is
+   weaker, because a list is only as good as the skill that reads it and a console UI can move a button
+   under it. The trade was made because release work was being routed here anyway, and a boundary
+   people work around is worse than one that is written down honestly.
+
+   **Not yet built.** No skill implements co-driving. `store-status-check` remains read-and-record;
+   this decision records permission, not a capability. When a submission skill is written it must cite
+   this amendment, and the forbidden list above belongs in the skill file verbatim rather than by
+   reference — a rule one link away from the person following it is a rule that gets skipped.
+
+   **The other half of the amendment.** `pocket-dating-coach` now tells this repo when a release
+   ships, through `store-ops check-in`. That is an append into this ledger through this repo's own
+   CLI — see `portfolio-commons/CONVENTIONS.md`, write path 1 — and it is the only way another repo
+   writes here.
 
 4. **Release engineering stays in `pocket-dating-coach`.** Keystores, signing config, CI release
    workflows, version bumps — all product-repo concerns that need direct repo access. This repo never

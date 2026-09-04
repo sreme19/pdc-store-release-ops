@@ -6,7 +6,14 @@ description: Check Google Play Console and/or App Store Connect for Riteangle (p
 # Store status check
 
 This is a read-and-record skill. It never resubmits, promotes, or changes anything in either
-console — see `SPEC.md` decision 3. It exists so that "is anything stuck" has an answer without
+console.
+
+Decision 3 was amended on 2026-09-03 to permit *preparing* a submission — drafting release notes,
+attaching a build, reading the result back — while still forbidding the completing action: Submit
+for Review, promoting to Production, releasing to users. **That permission does not extend to this
+skill.** This one still only looks and writes to the ledger. A skill that prepares a submission is a
+separate thing that does not exist yet, and quietly widening this one is exactly how a boundary
+stops meaning anything. It exists so that "is anything stuck" has an answer without
 someone having to remember what was last checked and when.
 
 ## Before you start
