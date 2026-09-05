@@ -113,6 +113,16 @@ of the full description; that is all that shows before "Read more".
 Check every string's length with a script before proposing it. "Riteangle: Matchmaking,
 Not Swiping" reads like it fits and is 35.
 
+**Avoid anything Play can read as a ranking or performance keyword.** Play Console
+validates the short description on save and warns "your app may not be promoted on Google
+Play" for "keywords that indicate store performance or ranking". On 2026-09-05 the word
+**"ordered"** (as in "an ordered shortlist") tripped it. The penalty is exclusion from
+promotional surfaces, not a publishing block, and the warning only appears *after* you
+save — so budget a save-check-fix pass rather than assuming the first save is final.
+
+Note this is the same word `compliance.md` §7's "ranking people" line catches. When two
+independent rule sets flag one word, replace the word rather than argue either.
+
 ## Output layout
 
 ```
