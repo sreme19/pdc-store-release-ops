@@ -1,0 +1,62 @@
+# Listing copy v1 — Android, India (en-US default listing, Hinglish body)
+
+Play caps: title 30 · short description 80 · full description 4000.
+
+---
+
+## Title (30/30)
+
+```
+riteangle: Matched, Not Swiped
+```
+
+## Short description (73/80)
+
+```
+Matchmaking, not swiping. Verified men, an ordered shortlist — you first.
+```
+
+## Full description
+
+> ⚠️ The block marked **GATED** below must not ship until BLOCKERS.md #2 is closed.
+
+```
+Pehle tum. Phir koi aur. 💗
+
+Riteangle ek matchmaking app hai — swipe wala dating app nahi. Yahan tum ghanton profiles scroll nahi karti. Verified logon ka ek chhota, ordered shortlist banta hai, aur woh kaam hum karte hain.
+
+Kyunki jo insaan tumhe chahiye, woh deck ke 400th card par nahi milta.
+
+✦ NO SWIPES. EVER.
+Koi swipe deck nahi. Koi endless feed nahi. Match fit ke hisaab se bante hain — is hisaab se nahi ki kisne photo achhi lagayi.
+
+✦ HAR KOI ID-VERIFIED
+ID, photos, lifestyle aur intent — sab verify hote hain, bina exception. Raw files koi nahi dekhta. Sirf woh signals dikhte hain jo tum allow karti ho.
+
+✦ EK SHORTLIST — FLOOD NAHI
+Median member ko 14 verified suitors milte hain, ordered. Chaudah alag-alag tabs nahi. Ek list, sabse relevant sabse upar.
+
+✦ EMOTIONAL HEAVY LIFTING HUM SAMBHAALTE HAIN 🤍
+Tumhara AI companion tumhari taraf se baat shuru kar sakta hai aur sawaal pooch sakta hai, taaki tum har baar zero se shuru na karo. Is platform par aadhe se zyada messages (54%) AI ne kisi ki taraf se bheje hain.
+
+✦ GENDER-BALANCED, ACTUALLY
+Zyadatar Indian dating apps 70–93% male hote hain. Riteangle under 2:1 chalta hai. Yeh claim nahi, measurement hai.
+
+✦ TUM DECIDE KARTI HO KAUN NAHI DIKHEGA
+Apni lane chuno — Forever-Focused, Second-Chapter, Low-Pressure aur baaki. Har lane batati hai kaun best match hai, kaun good fit, aur kaun kabhi dikhega hi nahi.
+
+[GATED — do not ship until confirmed in product]
+✦ MATCH CHUP HO GAYA? BADAL DENGE.
+Agar ek match quiet ho jaata hai, hum use replace karte hain. Baaki jagah paise dene ke baad matches sookh jaate hain — yahan nahi.
+[/GATED]
+
+✦ DATING SE BREAK CHAHIYE? Networking Season on karo aur sirf platonic connections dekho. Koi judgement nahi.
+
+— — —
+
+Riteangle un logon ke liye hai jo apne aap par kaam kar rahe hain aur usi level ka koi chahte hain. Identity-verified, established professionals. Pehle apni taakat, apna career, apna sukoon — phir koi aur.
+
+Khud ko bana sakti ho. Baaki hum dekh lenge.
+
+Matchmaking app India · dating app for women · verified profiles · no swipe dating · serious relationship · marriage minded · AI matchmaker
+```
