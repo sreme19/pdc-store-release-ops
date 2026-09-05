@@ -35,28 +35,47 @@ matches across 21 male + 22 female seed personas. Whether the demo account's own
 shortlist resolves to those seed rows or to real members is **unverified** — it needs a
 login and a look before any post-auth screen is published.
 
-## 2. Two approved claims are not confirmed in the product
+## 2. Two approved claims were not found in the product
 
-Both were approved for the listing this session. Neither could be found in the
-shipped app, and Play's misleading-claims policy bites on both.
+Both were approved for the listing this session. Neither could be found in the shipped
+app. Play's misleading-claims policy bites on both.
 
-- **The replacement guarantee** ("if a match goes quiet, we replace it"). Source is
-  the objection-handling table in `pdc-ad-management-agent/rules/creative-style.md`.
-  A grep of `mobile/lib/*.dart` found no replacement, guarantee or goes-quiet logic.
-  This is the single highest-leverage line available — it answers the one complaint
-  the audit found across Tinder, Aisle, Shaadi.com, BharatMatrimony *and* OkCupid —
-  and it must be a promise the product actually keeps before it goes on the store.
-- **"Verified, then deleted."** A grep of `proof_upload_screen.dart`,
-  `category_proof_screen.dart` and `verification_screen.dart` found no
-  deletion language. Confirm the proof is genuinely deleted before claiming it.
+### The replacement guarantee — RAISED AND OVERRIDDEN, ships as written
 
-## 3. The §8 independent QA pass has not been run
+"If a match goes quiet, we replace it." Source is the objection-handling table in
+`pdc-ad-management-agent/rules/creative-style.md`. A grep of `mobile/lib/*.dart` found no
+replacement, guarantee or goes-quiet logic.
 
-`compliance.md` §8 requires a second, independent pass (different model or fresh
-session) on any finished asset. These plates have had one pass only — this one.
+It was raised as a blocker on 2026-09-05 and **the owner directed that it ship anyway**,
+that same day. Recorded here rather than silently dropped or silently shipped, because a
+claim that turns out to be wrong should be traceable to a decision instead of looking
+like a check nobody ran.
 
-One item specifically for that pass: **§7's Don't list includes "ranking people,"**
-and the hero strap reads "ordered by fit — not by who gamed the photo." The
-phrasing is lifted from the approved objection-handling table and "ordered" was
-chosen over "ranked" deliberately, but the call belongs to an independent reviewer,
-not to the session that wrote the line.
+What that decision carries, stated once: this is a public promise on a store listing, so
+it needs to be true operationally even if no code enforces it — somebody has to actually
+replace a quiet match when a member reports one. If that is handled manually today, the
+claim is fine and this note is just bookkeeping.
+
+### "Verified, then deleted" — CLOSED, no change needed
+
+A grep of `proof_upload_screen.dart`, `category_proof_screen.dart` and
+`verification_screen.dart` found no deletion language, so the plates and the description
+were written to the app's own pre-auth wording — *"No one sees the raw files — only the
+signals you allow"* — rather than the ad line. Raised with the owner on 2026-09-05 and
+**closed as not worth pursuing.**
+
+Nothing shipped needs changing: the copy already makes the narrower, supportable claim.
+If proof genuinely is deleted, the listing is underselling that and could be upgraded
+later — an opportunity, not a defect.
+
+## 3. `compliance.md` §8 independent pass — WAIVED for v1
+
+§8 asks for a second, independent pass (different model or fresh session) on any finished
+asset. None ran on these plates or this copy. Raised on 2026-09-05 and **waived by the
+owner** for v1.
+
+The specific item it would have adjudicated, left here for whoever revisits: §7's Don't
+list includes **"ranking people,"** and this copy uses "ordered", "best match" and "good
+fit". The phrasing is lifted from the approved objection-handling table and "ordered" was
+chosen over "ranked" deliberately — but that call was made by the session that wrote the
+line, which is exactly the thing §8 exists to prevent.

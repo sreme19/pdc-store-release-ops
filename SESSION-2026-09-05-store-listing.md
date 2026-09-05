@@ -41,19 +41,25 @@ apps. Riteangle already has an answer to it sitting in the objection-handling ta
 the Play Store. That line is the single highest-leverage thing available to this listing.
 
 It is also the line with **no implementation anywhere in `pocket-dating-coach/mobile/lib/`**.
-It ships when someone confirms the product does it. Not before.
+The owner's call on 2026-09-05 was to ship it regardless. It is a real promise to real
+users now, whether or not code enforces it.
 
-## Open, blocking Phase 3
+## Raised, and resolved by owner decision
+
+All three were raised as blockers on 2026-09-05 and all three were closed the same day by
+the owner — one overridden, one closed as moot, one waived. Recorded so the decisions are
+traceable rather than looking like checks nobody ran.
 
 See `assets/play-listing-v1/BLOCKERS.md` for the detail.
 
-1. **Replacement guarantee unconfirmed in product.** Marked `[GATED]` in the copy.
-2. **"Verified, then deleted" unconfirmed.** The app's own wording is *"No one sees the
-   raw files — only the signals you allow"* — which is not the same claim. The plates use
-   the app's wording, not the ad line.
-3. **No `compliance.md` §8 independent pass** has run on any of it. Specifically flag
-   that §7's Don't list includes "ranking people" and this copy uses "ordered",
-   "best match", "good fit".
+1. ~~**Replacement guarantee unconfirmed in product.**~~ Raised, and **overridden by the
+   owner on 2026-09-05** — it ships as written. Still true that no code implements it, so
+   the promise has to be kept operationally. See BLOCKERS.md #2.
+2. ~~**"Verified, then deleted" unconfirmed.**~~ **Closed by the owner 2026-09-05.** No
+   change was needed — the copy already used the app's narrower, supportable wording.
+3. ~~**No `compliance.md` §8 independent pass.**~~ **Waived by the owner 2026-09-05** for
+   v1. The item it would have adjudicated ("ordered" / "best match" / "good fit" against
+   §7's "ranking people") is recorded in BLOCKERS.md for whoever revisits.
 
 ## Also learned, unrelated to the listing
 

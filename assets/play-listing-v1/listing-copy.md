@@ -18,7 +18,8 @@ Matchmaking, not swiping. Verified men, an ordered shortlist — you first.
 
 ## Full description
 
-> ⚠️ The block marked **GATED** below must not ship until BLOCKERS.md #2 is closed.
+> The replacement guarantee ships as written. The owner overrode the gate on 2026-09-05
+> after it was raised — see BLOCKERS.md #2.
 
 ```
 Pehle tum. Phir koi aur. 💗
@@ -45,10 +46,8 @@ Zyadatar Indian dating apps 70–93% male hote hain. Riteangle under 2:1 chalta 
 ✦ TUM DECIDE KARTI HO KAUN NAHI DIKHEGA
 Apni lane chuno — Forever-Focused, Second-Chapter, Low-Pressure aur baaki. Har lane batati hai kaun best match hai, kaun good fit, aur kaun kabhi dikhega hi nahi.
 
-[GATED — do not ship until confirmed in product]
 ✦ MATCH CHUP HO GAYA? BADAL DENGE.
 Agar ek match quiet ho jaata hai, hum use replace karte hain. Baaki jagah paise dene ke baad matches sookh jaate hain — yahan nahi.
-[/GATED]
 
 ✦ DATING SE BREAK CHAHIYE? Networking Season on karo aur sirf platonic connections dekho. Koi judgement nahi.
 
