@@ -138,6 +138,53 @@ assets/play-listing-<version>/
 
 Keep `ui-captures/` — re-capturing means re-booting an emulator and re-walking the flow.
 
+## Making the change in Play Console
+
+`SPEC.md` decision 3: prepare, never complete. **Save** is preparation — the footer says so
+outright ("changes will be saved in Publishing overview, ready for you to send for review").
+**Submit for review** is a human step, and with managed publishing off it is the last
+decision point, not a staging one.
+
+**Expect your console writes to be denied.** On 2026-09-05 the session's permission
+classifier blocked every attempt to type into a live listing field — three times, via both
+keyboard input and programmatic form input, on the short description and again on the app
+name. Do not work around it. Plan for the real deliverable being the repo-side record plus
+by-hand steps, and hand the console edit over. Only the *reads* and the asset uploads went
+through.
+
+### Switch the language selector FIRST
+
+For a localized listing this is the step that can do real damage. Store listings **opens on
+`Default – English (United States) – en-US`**, and the language selector is easy to miss.
+Typing there edits the default, which serves every country without its own localization — on
+this app that is the other 11 SEA/South Asia markets, and it would break decision E18.
+
+To create a localization: **Manage translations → Select languages →** tick the locale →
+**Apply**. `Manage translations` also holds `Change default language`, directly above
+`Select languages` in the same menu — do not misclick it. Applying creates an empty listing
+for that locale; Play's own note is that "listings with no translations will be displayed in
+your default language", so an untouched localization is harmless.
+
+### The asset library, which is fiddlier than it looks
+
+- **"Add assets" is a `<button>`, not a file input.** Uploading against it fails with
+  "Element is not a file input". The real `<input type="file">` only exists once the asset
+  panel is open, so: click "Add assets", *then* re-query for the file input, then upload to
+  that ref. Never click the visible Upload button — it opens a native picker you cannot see.
+- **Uploading past the cap replaces rather than errors.** 4 existing screenshots + 8 new,
+  against a cap of 8, resolved to 8/8 with the old ones dropped. Convenient, but it is a
+  silent replacement — confirm the count afterwards.
+- **Upload order is non-deterministic.** Eight files uploaded in one call landed in the order
+  06,07,05,08,02,03,01,04 and needed five drag-and-drop moves to fix. **Plate 1 is the
+  search-result thumbnail**, so order is not cosmetic. Drag the tile body, not its centre —
+  hovering reveals delete/move buttons that swallow the grab. Re-screenshot between drags:
+  every position shifts after each move.
+- **Graphics inherit from the default listing** into a new localization until you override
+  them, which is why a fresh locale shows the old feature graphic at 1/1 rather than empty.
+- **Programmatic field writes leave stale validation.** Setting a value without real
+  keystrokes updates the character counter but can leave the red "Add a name for your app"
+  hint showing. Click into the field and retype to clear it before saving.
+
 ## Verifying a listing actually shipped
 
 **The console is the authority, not the public page.** Publishing overview is the answer:
@@ -157,6 +204,18 @@ https://play.google.com/store/apps/details?id=com.riteangle.app&gl=IN&hl=en_IN
 Play country follows the account's Play/payment country, so a VPN does not change it.
 This cost real confusion on 2026-09-05: the en-IN listing was already live and looked
 unshipped.
+
+**There is an automated gate before Google's review.** After submitting, Publishing overview
+shows **"Running quick checks for commonly found issues"** with a countdown — about 14
+minutes on the 2026-09-05 title change — and the wording is conditional: *"Changes will be
+sent for review as soon as checks complete successfully."* A submission parked in that gate
+has **not** reached review. Do not report it as in-review until the banner flips to "Your
+changes are now in review"; the item list stays empty while checks run, which reads
+misleadingly like nothing was submitted.
+
+Useful negative result from that run: the checks **passed** with "ordered" still in the short
+description. So Play's ranking-keyword flag costs promotional eligibility only — it is not a
+review blocker.
 
 **Review can be much faster than advertised.** The dialog warns up to 7 days; the en-IN
 listing was approved and auto-rolled-out the same session it was submitted, and the

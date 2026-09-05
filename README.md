@@ -10,9 +10,21 @@ engineering (keystores, CI, version bumps) lives in `pocket-dating-coach/mobile`
 ## Setup
 
 ```bash
-pip install -e ".[dev]"
+uv venv && uv pip install -e ".[dev]"
 pytest tests/ -v
 ```
+
+**If `store-ops` fails with `bad interpreter: .../Code/store-release-ops/.venv/bin/python3.14`,
+the venv predates this repo being renamed to `pdc-store-release-ops`** — the console script's
+shebang holds an absolute path and does not survive a directory rename. Rebuild it:
+
+```bash
+rm -rf .venv && uv venv && uv pip install -e ".[dev]"
+```
+
+This matters more than a normal dev-setup nit: `SPEC.md` decision 9 contemplates scheduling
+this loop, and a scheduled run would have hit the broken shebang and failed. Found and fixed
+2026-09-05, after working around it with `PYTHONPATH=src python3 -m store_release_ops.cli`.
 
 ## Usage
 
