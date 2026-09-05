@@ -138,6 +138,50 @@ assets/play-listing-<version>/
 
 Keep `ui-captures/` — re-capturing means re-booting an emulator and re-walking the flow.
 
+## Verifying a listing actually shipped
+
+**The console is the authority, not the public page.** Publishing overview is the answer:
+"Last published on <date>" with the "Changes in review" section gone means it is live.
+
+The public Play page is only a valid check **with locale params attached**, because Play
+serves a localization based on the *viewer's* Google account country and language — not
+on what you published. A localized listing looks like it never shipped when you view it
+from the wrong account. The console's own "View on Play" link is a bare
+`play.google.com/store/apps/details?id=<pkg>` with no `gl`/`hl`, so it lands on whatever
+the viewer's locale resolves to, which for this account is the en-US default.
+
+```
+https://play.google.com/store/apps/details?id=com.riteangle.app&gl=IN&hl=en_IN
+```
+
+Play country follows the account's Play/payment country, so a VPN does not change it.
+This cost real confusion on 2026-09-05: the en-IN listing was already live and looked
+unshipped.
+
+**Review can be much faster than advertised.** The dialog warns up to 7 days; the en-IN
+listing was approved and auto-rolled-out the same session it was submitted, and the
+1106/1.0.8 production release cleared in about 14 hours. With managed publishing off
+there is no second gate, so submitting is the last decision point.
+
+## Measuring whether a listing change worked
+
+Where the numbers live, as of 2026-09-05: **Grow users → overview** carries the funnel
+(device impressions / acquisitions / first opens / MAD / retention) and a **Store
+listings** card showing the conversion rate. The old **Store performance → Store
+analysis** page is now an empty redirect stub that points back at those two.
+
+Mind two traps. The conversion rate on that card defaults to **last 90 days** while the
+funnel tiles default to **last 28 days** — they are different windows and must not be
+divided against each other. And the card reads "Default listing", so once a localization
+exists that figure stops describing the localized market.
+
+**Do not present a before/after as a result at this app's volume.** ~139 acquisitions per
+28 days means week-to-week noise is larger than any plausible listing effect, and the
+window is already confounded (Production went live 2026-09-02, three days before the
+listing change). The right instrument is a **Play store listing experiment** — a real
+holdback — and none has ever been run here. Capture baselines and label them directional;
+say plainly that the effect is not measurable yet rather than dressing a number up.
+
 ## What does not go in the ledger
 
 `ledger/records.jsonl` holds console *status* — check-ins, deadlines, issues. Listing
