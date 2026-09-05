@@ -15,7 +15,7 @@ Build: `/Users/performek5/Desktop/Code/pdc-ad-management-agent/.venv/bin/python 
 | A1 | Shelf | Transformation / self-worth — **not** dating, **not** matrimony. `BUILD-YOURSELF-FIRST`. |
 | A2 | Audience | **Women**, primary |
 | A3 | Contrast | Named contrast allowed — "No swipes. Ever." |
-| B4 | Title (30 cap) | `riteangle: Matched, Not Swiped` (30/30) |
+| B4 | Title (30 cap) | **Revised 2026-09-05:** `riteangle: Pehle Tum, Phir Koi` (30/30). Was `riteangle: Matched, Not Swiped`. Trades the last title keyword for the Hinglish/empowerment framing. **Not yet applied in the console** — see listing-copy.md |
 | B5 | Short description (80 cap) | `Matchmaking, not swiping. Verified men, an ordered shortlist — you first.` (73) |
 | B6 | Emoji | Light, deliberate — Aisle/Bumble middle, not Tinder density |
 | B7 | Language | **Hinglish**, India-only listing |
