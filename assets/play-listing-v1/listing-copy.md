@@ -12,24 +12,29 @@ riteangle: Matched, Not Swiped
 
 ## Short description (73/80)
 
+**What is actually staged in Play Console (en-IN):**
+
+```
+Matchmaking, not swiping. Verified men, an ordered shortlist — you first.
+```
+
+**Alternative, drafted but NOT used:**
+
 ```
 Matchmaking, not swiping. Verified men, a shortlist that means something.
 ```
 
-**Revised 2026-09-05, in the console.** The first version read "...Verified men, an
-ordered shortlist — you first." Play Console flagged it on save:
+On save, Play Console warned against the staged version:
 
 > Your app may not be promoted on Google Play because your short description does not
 > meet the following guidelines: **Should not use keywords that indicate store
 > performance or ranking**
 
-The trigger is **"ordered"** — Google's metadata policy reads it as a ranking keyword.
-The penalty is exclusion from Play's promotional surfaces, not a block on publishing.
-
-Worth noting this is the *same word* `compliance.md` §7's "ranking people" line was
-flagged against when this copy was written. Two independent rule sets, one word. The
-replacement is a registered tagline from `creative-style.md`, so it needs no new
-approval.
+The trigger is **"ordered"**. The consequence is exclusion from Play's promotional
+surfaces; it does not block publishing or review. The alternative above was drafted as a
+fix and **the owner decided on 2026-09-05 not to make the change** — the staged version
+ships as-is. Recorded so the warning is traceable to a decision rather than looking
+unnoticed.
 
 ## Full description
 
