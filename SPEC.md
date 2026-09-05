@@ -90,9 +90,34 @@ result through a deterministic CLI.
 7. **Tech stack: Python (`uv`/`hatchling`), matching `ad-management-agent` and `job-hunt-agent`.** Same
    conventions, one less thing to context-switch on.
 
-8. **Repo is private.** Rejection reasoning, App Store review correspondence, and Play Console tester
-   counts are business-sensitive, even though none of it is as sensitive as `ad-management-agent`'s
-   budget/targeting data.
+8. **Repo is PUBLIC — corrected 2026-09-05. Treat everything written here as published.**
+
+   This decision used to read "Repo is private," on the reasoning that rejection reasoning, App
+   Store review correspondence, and Play Console tester counts are business-sensitive. **That was
+   never true of the actual remote.** `gh repo view sreme19/pdc-store-release-ops` returns
+   `"visibility": "PUBLIC"`, and 19 ledger records had already been pushed to it — including the
+   4.3(b) rejection reasoning, Apple submission id `3a44802f-5ff0-4445-b8b1-b54111a45b41`, tester
+   counts and install figures. The spec asserted a protection the repo did not have, which is worse
+   than having no such decision: anyone reading this file would have assumed a private drawer and
+   written accordingly.
+
+   Corrected to match reality rather than by flipping the repo. The app owner was offered
+   `gh repo edit --visibility private` on 2026-09-05 and declined for now, so the constraint moves
+   into what gets written instead.
+
+   **Therefore, the operative rule going forward:** this repo is a public artifact. Anything a
+   skill or a check-in writes here is published the moment it is pushed. That is acceptable for
+   release *status* — track ages, review outcomes, deadline dates, listing copy — which is the
+   ledger's whole purpose and mostly inferable from the public Play listing anyway. It is **not**
+   acceptable for: console credentials or session tokens (already barred by decision 2), anything
+   from `ad-management-agent`'s gitignored budget/targeting data, member PII of any kind, or
+   screenshots containing real user profiles, photos or messages (see
+   `assets/play-listing-v1/BLOCKERS.md` — this is the same boundary that kept post-auth app
+   captures out of the store listing).
+
+   Making the repo private later would not unpublish what has already been fetched or cached. If
+   the submission id or the rejection thread turn out to matter, that is a separate cleanup, not a
+   visibility flip.
 
 9. **Promotion to a scheduled task is a later, deliberate step — not attempted now.** `ad-audit` only
    became a candidate for a Claude Code scheduled task after `ad-setup-loop`/`ad-audit` had been run by
